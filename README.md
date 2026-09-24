@@ -41,6 +41,17 @@ flowchart TD
     G --> F
 ```
 
+Extraction is optional. Policy rules require supporting evidence before
+issuing an approval decision. Successful rules produce the response
+without calling the answer generator.
+
+The answer generator can be a local extractive baseline or an OpenAI
+model. The OpenAI generator validates that cited IDs came from the
+retrieved evidence.
+
+Evaluation runs separately: it sends test questions through the
+application and compares the responses with expected behavior.
+
 ## Run it
 
 ```bash
