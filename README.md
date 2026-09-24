@@ -1,4 +1,4 @@
-# Project 1: Eval-Driven RAG
+# Eval-Driven RAG
 
 This project starts with a deterministic, local retrieval baseline. It answers from a Markdown handbook, attaches source chunk IDs, and runs a small regression dataset. That baseline matters: every later embedding model, reranker, prompt, or agent must demonstrate an improvement instead of merely looking more sophisticated.
 
