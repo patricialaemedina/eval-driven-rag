@@ -15,17 +15,31 @@ a deterministic BM25 baseline and progressively introduces:
 
 ## Current architecture
 
-Question
-   ↓
-BM25 Retrieval
-   ↓
-Structured Extraction
-   ↓
-Deterministic Policy Rules
-   ↓
-Grounded Answer Generation
-   ↓
-Citation Validation + Evaluation
+```mermaid
+flowchart TD
+    D[Markdown handbook] --> C[Split into chunks]
+    C --> B[BM25 index]
+    Q[User question] --> R[Retrieve relevant chunks]
+    B --> R
+
+    R --> E{Any evidence found?}
+    E -->|No| A[Abstain]
+    E -->|Yes| X{LLM extraction enabled?}
+
+    X -->|Yes| S[Extract role, action, amount, and intent]
+    S --> P{Refund approval request?}
+    P -->|Yes| SR[Apply structured policy rules]
+    SR --> O{Rule returned a response?}
+    O -->|Yes| F[Return answer or clarification]
+    O -->|No| A
+    P -->|No| G[Configured answer generator]
+
+    X -->|No| KR{Keyword rule applies?}
+    KR -->|Yes| F
+    KR -->|No| G
+
+    G --> F
+```
 
 ## Run it
 
