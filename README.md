@@ -1,6 +1,31 @@
 # Eval-Driven RAG
 
-This project starts with a deterministic, local retrieval baseline. It answers from a Markdown handbook, attaches source chunk IDs, and runs a small regression dataset. That baseline matters: every later embedding model, reranker, prompt, or agent must demonstrate an improvement instead of merely looking more sophisticated.
+An evaluation-first RAG system built to measure whether each increase
+in system complexity actually improves retrieval and answer quality.
+
+Instead of starting with embeddings and an LLM, the project establishes
+a deterministic BM25 baseline and progressively introduces:
+
+- grounded LLM responses
+- structured extraction
+- deterministic policy decisions
+- citation validation
+- regression evaluation
+- latency and token observability
+
+## Current architecture
+
+Question
+   ↓
+BM25 Retrieval
+   ↓
+Structured Extraction
+   ↓
+Deterministic Policy Rules
+   ↓
+Grounded Answer Generation
+   ↓
+Citation Validation + Evaluation
 
 ## Run it
 
