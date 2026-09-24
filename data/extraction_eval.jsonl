@@ -1,0 +1,6 @@
+{"question":"Could a support agent authorize a $75 reimbursement?","expected":{"role":"support_agent","action":"approve_refund","amount":75, "intent":"check_authority"}}
+{"question":"Can a support agent approve a $250 refund?","expected":{"role":"support_agent","action":"approve_refund","amount":250,"intent":"check_authority"}}
+{"question":"Can a travel agent approve a reimbursement?","expected":{"role":"travel_agent","action":"approve_refund","amount":null,"intent":"check_authority"}}
+{"question":"Can an agent approve a refund?","expected":{"role":null,"action":"approve_refund","amount":null,"intent":"check_authority"}}
+{"question":"Who approves a $250 refund?","expected":{"role":null,"action":"approve_refund","amount":250,"intent":"find_approver"}}
+{"question":"Can a support agent approve a $100.01 refund?","expected":{"role":"support_agent","action":"approve_refund","amount":100.01,"intent":"check_authority"}}

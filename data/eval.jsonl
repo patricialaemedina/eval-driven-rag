@@ -1,0 +1,13 @@
+{"question":"How quickly must a critical incident be acknowledged?","required_terms":["15 minutes"],"expected_citations":["handbook#1"]}
+{"question":"Who approves a $250 refund?","required_terms":["support manager"],"expected_citations":["handbook#2"]}
+{"question":"How long are security audit logs kept?","required_terms":["one year"],"expected_citations":["handbook#3"]}
+{"question":"What is the office dress code?","required_terms":[],"expected_citations":[],"should_abstain":true}
+{"question":"What happens after cancelling a monthly subscription?","required_terms":["end of the current billing period"],"expected_citations":["handbook#4"]}
+{"question":"Can a support agent approve a $250 refund?","required_terms":["support manager"],"forbidden_terms":["yes"],"expected_citations":["handbook#2"],"expected_decision":"no"}
+{"question":"Is a $250 reimbursement within an agent’s authority?","required_terms":["What type of agent"],"expected_citations":[],"should_abstain":false,"expected_decision":"not_applicable","should_clarify":true}
+{"question":"Does a travel agent have the authority to approve a $250 reimbursement?","required_terms":["cannot approve"],"expected_citations":["handbook#5"],"should_abstain":false,"expected_decision":"no"}
+{"question":"May a travel agent authorize a $50 reimbursement?","required_terms":["cannot approve"],"expected_citations":["handbook#5"],"should_abstain":false,"expected_decision":"no"}
+{"question":"Can a support agent approve a refund of exactly $100?","required_terms":[],"expected_citations":["handbook#2"],"should_abstain":false,"expected_decision":"yes","should_clarify":false}
+{"question":"Can a support agent approve a $100.01 refund?","required_terms":["support manager"],"expected_citations":["handbook#2"],"should_abstain":false,"expected_decision":"no","should_clarify":false}
+{"question":"Can a support agent approve this refund?","required_terms":["refund amount"],"expected_citations":[],"should_abstain":false,"expected_decision":"not_applicable","should_clarify":true}
+{"question":"Can a travel agent approve a reimbursement?","required_terms":["cannot approve"],"expected_citations":["handbook#5"],"should_abstain":false,"expected_decision":"no","should_clarify":false}
